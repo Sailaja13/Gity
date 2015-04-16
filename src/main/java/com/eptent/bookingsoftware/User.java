@@ -12,7 +12,11 @@ public class User {
 	private String lastName;
 	private String email;
 	private String password;
-	private boolean active;
+	private boolean active = true;
+	//@DbRef 	
+		List<String> roles;
+	
+	
 	public boolean isActive() {
 		return active;
 	}
@@ -21,8 +25,6 @@ public class User {
 		this.active = active;
 	}
 
-	//@DbRef 	
-	List<String> roles;
 	
 	public String getFirstName() {
 		return firstName;

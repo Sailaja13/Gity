@@ -1,12 +1,15 @@
-package com.eptent.bookingsoftware;
+package com.eptent.bookingsoftware; 
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.geo.Point;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+
+@Document
 public class Address {
 
 	@Id private String id;
-
+	
 	private String firstLine;
 	private String secondLine;
 	private String city;
@@ -50,6 +53,15 @@ public class Address {
 	public void setZip(String zip) {
 		this.zip = zip;
 	}
-	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public void setId()
+	{
+		//this.id = new ObjectID();
+	}
 }
 

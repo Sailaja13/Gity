@@ -1,6 +1,7 @@
 package com.eptent.bookingsoftware;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 
@@ -18,7 +19,10 @@ public class Organization {
 	private String facebook;
 	private String twitter;
 	private String parentID;
+	
 	private Address address;
+	private List<Phone> phones;
+	private List<String> activities;
 
 	public String getName() {
 		return name;
@@ -106,6 +110,23 @@ public class Organization {
 
 	public void setAddress(Address address) {
 		this.address = address;
+		//this.address.
+	}
+
+	public List<Phone> getPhones() {
+		return phones;
+	}
+
+	public void setPhones(List<Phone> phones) {
+		this.phones = phones;
+	}
+
+	public List<String> getActivities() {
+		return activities;
+	}
+
+	public void setActivities(List<String> activities) {
+		this.activities = activities;
 	}
 	
 

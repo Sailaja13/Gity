@@ -11,5 +11,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface ActivityRepository extends MongoRepository<Activity, String> {
 	
 	List<Activity> findByDate(@Param("date") Date date);
+	List<Activity> findByDueDate(@Param("dueDate") Date dueDate);	
 	List<Activity> findByUserID(@Param("userID") String userID);
 }

@@ -23,6 +23,7 @@ public class Phone {
 
 	public void setNumber(String number) {
 		this.number = number;
+		this.id = number;
 	}
 
 }

@@ -13,6 +13,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface OrganizationRepository extends MongoRepository<Organization, String> {
 
 	List<Organization> findByName(@Param("name") String name);	
+	List<Organization> findByNameLike(@Param("name") String name);	
 	List<Organization> findByOrganizationType(@Param("organizationType") String organizationType);
 	List<Organization> findByParentID(@Param("parentID") String parentID);
 	List<Organization> findByAddressCity(@Param("city") String city);

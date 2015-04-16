@@ -6,9 +6,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "phonetypes", path = "phonetypes")
-public interface PhoneTypeRepository extends MongoRepository<PhoneType, String> {
+@RepositoryRestResource(collectionResourceRel = "eventattributes", path = "eventattributes")
+public interface EventAttributeRepository extends MongoRepository<EventAttribute, String> {
 
-	List<PhoneType> findByName(@Param("name") String name);
-	
+	List<EventAttribute> findByName(@Param("name") String name);
 }
